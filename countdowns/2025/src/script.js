@@ -120,30 +120,39 @@ Object.entries(dateIdMap).forEach(([doorID, dateVar]) => {
 	//const lockImage = doorElement.querySelector('.lock-image');
 	const doorImage = doorElement.querySelector('.door-image');
 
-	if(dateVar < currentDate)
+	if(doorElement.classList.contains('opened')
 	{
-		doorElement.classList.add('opened');
-		//if(lockImage) lockImage.style.display = 'none';
-	}
-	else if(dateVar.getTime() === currentDate.getTime())
-	{
-		//if(lockImage) lockImage.style.display = 'none';
-
-		doorElement.addEventListener('click', () => {
-			doorElement.classList.add('opened');
-		});
-
-		currentDayElement = doorElement;
-		scrollToCurrentDayButton.style.display = 'block';
+		doorElement.classList.remove('opened');
 	}
 	else
 	{
-		doorElement.addEventListener('click', () => {
-			alert("Come back later to see another Simba picture!");
-		});
-		//doorImage.classList.add('faded');
-		// lockImage.classList.add('not-faded');
+		doorElement.classList.add('opened');
 	}
+
+	// if(dateVar < currentDate)
+	// {
+	// 	doorElement.classList.add('opened');
+	// 	//if(lockImage) lockImage.style.display = 'none';
+	// }
+	// else if(dateVar.getTime() === currentDate.getTime())
+	// {
+	// 	//if(lockImage) lockImage.style.display = 'none';
+
+	// 	doorElement.addEventListener('click', () => {
+	// 		doorElement.classList.add('opened');
+	// 	});
+
+	// 	currentDayElement = doorElement;
+	// 	scrollToCurrentDayButton.style.display = 'block';
+	// }
+	// else
+	// {
+	// 	doorElement.addEventListener('click', () => {
+	// 		alert("Come back later to see another Simba picture!");
+	// 	});
+	// 	//doorImage.classList.add('faded');
+	// 	// lockImage.classList.add('not-faded');
+	// }
 });
 
 if(currentDayElement)

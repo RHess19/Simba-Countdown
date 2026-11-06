@@ -1,4 +1,165 @@
-<script>
-    const currentYear = new Date().getFullYear();
-    open(`https://www.simbacountdown.com/countdowns/${currentYear}/index.html`);
-</script>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Simba Countdown</title>
+	<link rel="stylesheet" type="text/css" href="./countdowns/2026/src/style.css">
+	<script src="./countdowns/2026/src/script.js" defer></script>
+	<link rel="icon" href="./countdowns/2026/media/favicon.jpg">
+</head>
+<body>
+	<button id="scrollToCurrentDay">Go to current day</button>
+	<button id="hamburgerMenu">&#9776;</button>
+
+	<nav id="sidebarMenu">
+		<ul class="menu-list">
+			<li><a href="./countdowns/2024/index.html">2024</a></li>
+			<li><a href="./countdowns/2025/index.html">2025</a></li>
+			<li><a href="./index.html">2026</a></li>
+		</ul>
+	</nav>
+
+	<div class="page-container">
+		<div class="header">
+			<img src="./countdowns/2026/media/snowflake.png" class="snowflake">
+			<div class="heading-and-timer-container">
+				<h2 class="heading">SIMBA COUNTDOWN 2025</h2>
+				<div class="timer-container">
+					<h3 class="countdown-timer"></h3>
+					<p>until Simba's 2nd Christmas (with us)!</p>
+				</div>
+			</div>
+			<img src="./countdowns/2026/media/snowflake.png" class="snowflake">
+		</div>
+
+		<div class="tiles-container">
+			<div class="door" id="present1">
+				<!--<img src="./countdowns/2026/media/lock.png" class="lock-image">-->
+				<img src="./countdowns/2026/media/presents/1.png" class="door-image">
+				<img src="./countdowns/2026/media/simbas/1.jpg" class="inside-image">
+			</div>
+			<div class="door" id="present2">
+				<!--<img src="./countdowns/2026/media/lock.png" class="lock-image">-->
+				<img src="./countdowns/2026/media/presents/2.png" class="door-image">
+				<img src="./countdowns/2026/media/simbas/2.jpg" class="inside-image">
+			</div>
+			<div class="door" id="present3">
+				<!--<img src="./countdowns/2026/media/lock.png" class="lock-image">-->
+				<img src="./countdowns/2026/media/presents/3.png" class="door-image">
+				<img src="./countdowns/2026/media/simbas/3.jpg" class="inside-image">
+			</div>
+			<div class="door" id="present4">
+				<!--<img src="./countdowns/2026/media/lock.png" class="lock-image">-->
+				<img src="./countdowns/2026/media/presents/4.png" class="door-image">
+				<img src="./countdowns/2026/media/simbas/4.jpg" class="inside-image">
+			</div>
+			<div class="door" id="present5">
+				<!--<img src="./countdowns/2026/media/lock.png" class="lock-image">-->
+				<img src="./countdowns/2026/media/presents/5.png" class="door-image">
+				<img src="./countdowns/2026/media/simbas/5.jpg" class="inside-image">
+			</div>
+			<div class="door" id="present6">
+				<!--<img src="./countdowns/2026/media/lock.png" class="lock-image">-->
+				<img src="./countdowns/2026/media/presents/6.png" class="door-image">
+				<img src="./countdowns/2026/media/simbas/6.jpg" class="inside-image">
+			</div>
+			<div class="door" id="present7">
+				<!--<img src="./countdowns/2026/media/lock.png" class="lock-image">-->
+				<img src="./countdowns/2026/media/presents/7.png" class="door-image">
+				<img src="./countdowns/2026/media/simbas/7.jpg" class="inside-image">
+			</div>
+			<div class="door" id="present8">
+				<!--<img src="./countdowns/2026/media/lock.png" class="lock-image">-->
+				<img src="./countdowns/2026/media/presents/8.png" class="door-image">
+				<img src="./countdowns/2026/media/simbas/8.jpg" class="inside-image">
+			</div>
+			<div class="door" id="present9">
+				<!--<img src="./countdowns/2026/media/lock.png" class="lock-image">-->
+				<img src="./countdowns/2026/media/presents/9.png" class="door-image">
+				<img src="./countdowns/2026/media/simbas/9.jpg" class="inside-image">
+			</div>
+			<div class="door" id="present10">
+				<!--<img src="./countdowns/2026/media/lock.png" class="lock-image">-->
+				<img src="./countdowns/2026/media/presents/10.png" class="door-image">
+				<img src="./countdowns/2026/media/simbas/10.jpg" class="inside-image">
+			</div>
+			<div class="door" id="present11">
+				<!--<img src="./countdowns/2026/media/lock.png" class="lock-image">-->
+				<img src="./countdowns/2026/media/presents/11.png" class="door-image">
+				<img src="./countdowns/2026/media/simbas/11.jpg" class="inside-image">
+			</div>
+			<div class="door" id="present12">
+				<!--<img src="./countdowns/2026/media/lock.png" class="lock-image">-->
+				<img src="./countdowns/2026/media/presents/12.png" class="door-image">
+				<img src="./countdowns/2026/media/simbas/12.jpg" class="inside-image">
+			</div>
+			<div class="door" id="present13">
+				<!--<img src="./countdowns/2026/media/lock.png" class="lock-image">-->
+				<img src="./countdowns/2026/media/presents/13.png" class="door-image">
+				<img src="./countdowns/2026/media/simbas/13.jpg" class="inside-image">
+			</div>
+			<div class="door" id="present14">
+				<!--<img src="./countdowns/2026/media/lock.png" class="lock-image">-->
+				<img src="./countdowns/2026/media/presents/14.png" class="door-image">
+				<img src="./countdowns/2026/media/simbas/14.jpg" class="inside-image">
+			</div>
+			<div class="door" id="present15">
+				<!--<img src="./countdowns/2026/media/lock.png" class="lock-image">-->
+				<img src="./countdowns/2026/media/presents/15.png" class="door-image">
+				<img src="./countdowns/2026/media/simbas/15.jpg" class="inside-image">
+			</div>
+			<div class="door" id="present16">
+				<!--<img src="./countdowns/2026/media/lock.png" class="lock-image">-->
+				<img src="./countdowns/2026/media/presents/16.png" class="door-image">
+				<img src="./countdowns/2026/media/simbas/16.jpg" class="inside-image">
+			</div>
+			<div class="door" id="present17">
+				<!--<img src="./countdowns/2026/media/lock.png" class="lock-image">-->
+				<img src="./countdowns/2026/media/presents/17.png" class="door-image">
+				<img src="./countdowns/2026/media/simbas/17.jpg" class="inside-image">
+			</div>
+			<div class="door" id="present18">
+				<!--<img src="./countdowns/2026/media/lock.png" class="lock-image">-->
+				<img src="./countdowns/2026/media/presents/18.png" class="door-image">
+				<img src="./countdowns/2026/media/simbas/18.jpg" class="inside-image">
+			</div>
+			<div class="door" id="present19">
+				<!--<img src="./countdowns/2026/media/lock.png" class="lock-image">-->
+				<img src="./countdowns/2026/media/presents/19.png" class="door-image">
+				<img src="./countdowns/2026/media/simbas/19.jpg" class="inside-image">
+			</div>
+			<div class="door" id="present20">
+				<!--<img src="./countdowns/2026/media/lock.png" class="lock-image">-->
+				<img src="./countdowns/2026/media/presents/20.png" class="door-image">
+				<img src="./countdowns/2026/media/simbas/20.jpg" class="inside-image">
+			</div>
+			<div class="door" id="present21">
+				<!--<img src="./countdowns/2026/media/lock.png" class="lock-image">-->
+				<img src="./countdowns/2026/media/presents/21.png" class="door-image">
+				<img src="./countdowns/2026/media/simbas/21.jpg" class="inside-image">
+			</div>
+			<div class="door" id="present22">
+				<!--<img src="./countdowns/2026/media/lock.png" class="lock-image">-->
+				<img src="./countdowns/2026/media/presents/22.png" class="door-image">
+				<img src="./countdowns/2026/media/simbas/22.jpg" class="inside-image">
+			</div>
+			<div class="door" id="present23">
+				<!--<img src="./countdowns/2026/media/lock.png" class="lock-image">-->
+				<img src="./countdowns/2026/media/presents/23.png" class="door-image">
+				<img src="./countdowns/2026/media/simbas/23.jpg" class="inside-image">
+			</div>
+			<div class="door" id="present24">
+				<!--<img src="./countdowns/2026/media/lock.png" class="lock-image">-->
+				<img src="./countdowns/2026/media/presents/24.png" class="door-image">
+				<img src="./countdowns/2026/media/simbas/24.jpg" class="inside-image">
+			</div>
+			<div class="door" id="present25">
+				<!--<img src="./countdowns/2026/media/lock.png" class="lock-image">-->
+				<img src="./countdowns/2026/media/presents/25.png" class="door-image">
+				<img src="./countdowns/2026/media/simbas/25.jpg" class="inside-image">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

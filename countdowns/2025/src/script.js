@@ -120,7 +120,7 @@ Object.entries(dateIdMap).forEach(([doorID, dateVar]) => {
 	//const lockImage = doorElement.querySelector('.lock-image');
 	const doorImage = doorElement.querySelector('.door-image');
 
-	if(doorElement.classList.contains('opened')
+	if(doorElement.classList.contains('opened'))
 	{
 		doorElement.classList.remove('opened');
 	}

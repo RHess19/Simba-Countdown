@@ -1,5 +1,6 @@
 const hamburgerButton = document.getElementById('hamburgerMenu');
 const sidebarMenu = document.getElementById('sidebarMenu');
+const COUNTDOWN_YEAR = 2026;
 
 function toggleMenu()
 {
@@ -23,7 +24,7 @@ document.addEventListener('click', (event) => {
 	}
 });
 
-let christmasDate = new Date("12/25/2025");
+let christmasDate = new Date(`12/25/${COUNTDOWN_YEAR}`);
 christmasDate.setHours(0, 0, 0, 0);
 
 const countdown = setInterval(function() {
@@ -52,31 +53,31 @@ const countdown = setInterval(function() {
 
 let currentDate = new Date();
 currentDate.setHours(0, 0, 0, 0);
-let date1 = new Date("12/1/2025");
-let date2 = new Date("12/2/2025");
-let date3 = new Date("12/3/2025");
-let date4 = new Date("12/4/2025");
-let date5 = new Date("12/5/2025");
-let date6 = new Date("12/6/2025");
-let date7 = new Date("12/7/2025");
-let date8 = new Date("12/8/2025");
-let date9 = new Date("12/9/2025");
-let date10 = new Date("12/10/2025");
-let date11 = new Date("12/11/2025");
-let date12 = new Date("12/12/2025");
-let date13 = new Date("12/13/2025");
-let date14 = new Date("12/14/2025");
-let date15 = new Date("12/15/2025");
-let date16 = new Date("12/16/2025");
-let date17 = new Date("12/17/2025");
-let date18 = new Date("12/18/2025");
-let date19 = new Date("12/19/2025");
-let date20 = new Date("12/20/2025");
-let date21 = new Date("12/21/2025");
-let date22 = new Date("12/22/2025");
-let date23 = new Date("12/23/2025");
-let date24 = new Date("12/24/2025");
-let date25 = new Date("12/25/2025");
+let date1 = new Date(`12/1/${COUNTDOWN_YEAR}`);
+let date2 = new Date(`12/2/${COUNTDOWN_YEAR}`);
+let date3 = new Date(`12/3/${COUNTDOWN_YEAR}`);
+let date4 = new Date(`12/4/${COUNTDOWN_YEAR}`);
+let date5 = new Date(`12/5/${COUNTDOWN_YEAR}`);
+let date6 = new Date(`12/6/${COUNTDOWN_YEAR}`);
+let date7 = new Date(`12/7/${COUNTDOWN_YEAR}`);
+let date8 = new Date(`12/8/${COUNTDOWN_YEAR}`);
+let date9 = new Date(`12/9/${COUNTDOWN_YEAR}`);
+let date10 = new Date(`12/10/${COUNTDOWN_YEAR}`);
+let date11 = new Date(`12/11/${COUNTDOWN_YEAR}`);
+let date12 = new Date(`12/12/${COUNTDOWN_YEAR}`);
+let date13 = new Date(`12/13/${COUNTDOWN_YEAR}`);
+let date14 = new Date(`12/14/${COUNTDOWN_YEAR}`);
+let date15 = new Date(`12/15/${COUNTDOWN_YEAR}`);
+let date16 = new Date(`12/16/${COUNTDOWN_YEAR}`);
+let date17 = new Date(`12/17/${COUNTDOWN_YEAR}`);
+let date18 = new Date(`12/18/${COUNTDOWN_YEAR}`);
+let date19 = new Date(`12/19/${COUNTDOWN_YEAR}`);
+let date20 = new Date(`12/20/${COUNTDOWN_YEAR}`);
+let date21 = new Date(`12/21/${COUNTDOWN_YEAR}`);
+let date22 = new Date(`12/22/${COUNTDOWN_YEAR}`);
+let date23 = new Date(`12/23/${COUNTDOWN_YEAR}`);
+let date24 = new Date(`12/24/${COUNTDOWN_YEAR}`);
+let date25 = new Date(`12/25/${COUNTDOWN_YEAR}`);
 
 // Dictionary of "date" => "present id"
 const dateIdMap = {

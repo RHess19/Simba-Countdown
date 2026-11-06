@@ -36,47 +36,76 @@ body
 #sidebarMenu
 {
 	position: fixed;
-	top: 0;
-	left: 0;
-	width: 250px;
-	height: 100px;
-	background-color: #529cf2;
-	color: white;
+	top: 90px;
+	left: 40px;
+	width: 200px;
 	z-index: 999;
-	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-	transform: translateX(-250px);
-	transition: transform 0.3s ease-in-out;
-	padding: 0;
-	margin: 0;
+	box-sizing: border-box;
+	padding: 12px;
+	background-color: #a8daf9;
+	border-radius: 15px;
+	box-shadow: -5px 5px #82c6f2;
+
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transform: translateY(-10px) scale(0.97);
+	transform-origin: top left;
+	transition: opacity 0.25s ease, transform 0.25s ease, visibility 0s linear 0.25s;
 }
 
 #sidebarMenu.open
 {
-	transform: translateX(0);
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+	transform: translateY(0) scale(1);
+	transition-delay: 0s;
+}
+
+.menu-title
+{
+	margin: 4px 8px 10px 8px;
+	color: #529cf2;
+	font-size: 13px;
+	font-weight: bold;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	opacity: 0.8;
 }
 
 .menu-list
 {
 	list-style: none;
-	padding: 100px 0 0 0;
+	padding: 0;
 	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
 }
 
 .menu-list li a
 {
-	background-color: #529cf2;
 	display: block;
-	padding: 15px 20px;
+	padding: 10px 16px;
+	border-radius: 10px;
 	text-decoration: none;
-	color: white;
+	color: #529cf2;
 	font-size: 18px;
 	font-weight: bold;
-	transition: background-color 0.2s;
+	transition: background-color 0.2s, color 0.2s, transform 0.2s;
 }
 
 .menu-list li a:hover
 {
-	background-color: #82c6f2;
+	background-color: #c3e4f9;
+	transform: translateX(4px);
+}
+
+.menu-list li a.current
+{
+	background-color: #529cf2;
+	color: white;
 }
 
 .page-container.menu-open
@@ -130,6 +159,11 @@ body
 		left: 10px; 
 		padding: 8px 12px;
 		font-size: 20px;
+	}
+
+	#sidebarMenu {
+		top: 60px;
+		left: 10px;
 	}
 }
 
@@ -215,16 +249,6 @@ body
 	position: absolute;
 }
 
-/*.lock-image
-{
-	z-index: 3;
-	max-width: 100px;
-	height: auto;
-	left: 50%;
-	bottom: 50%;
-	transform: translate(-50%, 75%);
-}*/
-
 .door-image
 {
 	z-index: 2;
@@ -264,13 +288,3 @@ body
 	visibility: visible;
 	transform: translate(-50%, 0%) scale(1);
 }
-
-/*.faded
-{
-	opacity: 0.5;
-}
-
-.not-faded
-{
-	opacity: 1;
-}*/

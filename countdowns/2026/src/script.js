@@ -156,3 +156,24 @@ if(currentDayElement)
 		});
 	});
 }
+
+// "New menu section" banner: dismissible, and remembered between visits
+const menuBanner = document.getElementById('menuBanner');
+const bannerClose = document.getElementById('bannerClose');
+const bannerKey = 'menuBannerDismissed-v2';
+
+if(menuBanner && bannerClose)
+{
+	let dismissed = false;
+	try { dismissed = localStorage.getItem(bannerKey) === 'true'; } catch(e) {}
+
+	if(dismissed)
+	{
+		menuBanner.style.display = 'none';
+	}
+
+	bannerClose.addEventListener('click', () => {
+		menuBanner.style.display = 'none';
+		try { localStorage.setItem(bannerKey, 'true'); } catch(e) {}
+	});
+}

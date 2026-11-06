@@ -33,29 +33,13 @@ body
 	transform: scale(0.95);
 }
 
-/* #sidebarMenu
-{
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 250px;
-	height: 100px;
-	background-color: #529cf2;
-	color: white;
-	z-index: 999;
-	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-	transform: translateX(-250px);
-	transition: transform 0.3s ease-in-out;
-	padding: 0;
-	margin: 0;
-} */
-
 #sidebarMenu
 {
 	position: fixed;
 	top: 90px;
 	left: 40px;
-	width: 200px;
+	width: max-content;
+	max-width: calc(100vw - 20px);
 	z-index: 999;
 	box-sizing: border-box;
 	padding: 12px;
@@ -71,11 +55,6 @@ body
 	transition: opacity 0.25s ease, transform 0.25s ease, visibility 0s linear 0.25s;
 }
 
-/* #sidebarMenu.open
-{
-	transform: translateX(0);
-} */
-
 #sidebarMenu.open
 {
 	opacity: 1;
@@ -83,6 +62,18 @@ body
 	pointer-events: auto;
 	transform: translateY(0) scale(1);
 	transition-delay: 0s;
+}
+
+.menu-columns
+{
+	display: flex;
+	flex-direction: row;
+	gap: 12px;
+}
+
+.menu-column
+{
+	min-width: 150px;
 }
 
 .menu-title
@@ -95,25 +86,6 @@ body
 	text-transform: uppercase;
 	opacity: 0.8;
 }
-
-/* .menu-list
-{
-	list-style: none;
-	padding: 100px 0 0 0;
-	margin: 0;
-}
-
-.menu-list li a
-{
-	background-color: #529cf2;
-	display: block;
-	padding: 15px 20px;
-	text-decoration: none;
-	color: white;
-	font-size: 18px;
-	font-weight: bold;
-	transition: background-color 0.2s;
-} */
 
 .menu-list
 {
@@ -136,11 +108,6 @@ body
 	font-weight: bold;
 	transition: background-color 0.2s, color 0.2s, transform 0.2s;
 }
-
-/* .menu-list li a:hover
-{
-	background-color: #82c6f2;
-} */
 
 .menu-list li a:hover
 {
@@ -170,6 +137,15 @@ body
 	#sidebarMenu {
 		top: 60px;
 		left: 10px;
+	}
+
+	.menu-column {
+		min-width: 120px;
+	}
+
+	.menu-list li a {
+		padding: 8px 12px;
+		font-size: 16px;
 	}
 }
 
@@ -283,22 +259,6 @@ body
 	border-radius: 15px;
 }
 
-/*.door-image
-{
-	z-index: 2;
-	transform-origin: left;
-	transition: transform 1s ease;
-	backface-visibility: hidden;
-	max-width: 100%;
-	height: auto;
-	object-fit: contain;
-	flex: 1 1 auto;
-	top: 0;
-	left: 0;
-	width: 400px;
-	height: 400px;
-}*/
-
 .door-image.front
 {
 	z-index: 2;
@@ -314,25 +274,3 @@ body
 {
 	transform: rotateY(180deg);
 }
-
-/*.inside-image
-{
-	z-index: 1;
-	max-width: 400px;
-	height: 400px;
-	bottom: 0;
-	margin-bottom: 0px;
-	visibility: hidden;
-	transition: transform 0.5s ease 0.5s;
-}*/
-
-/*.door.opened .door-image
-{
-	transform: rotateY(-180deg);
-}*/
-
-/*.door.opened .inside-image
-{
-	visibility: visible;
-	transform: translate(-50%, 0%) scale(1);
-}*/

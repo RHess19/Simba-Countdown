@@ -38,7 +38,8 @@ body
 	position: fixed;
 	top: 90px;
 	left: 40px;
-	width: 200px;
+	width: max-content;
+	max-width: calc(100vw - 20px);
 	z-index: 999;
 	box-sizing: border-box;
 	padding: 12px;
@@ -61,6 +62,18 @@ body
 	pointer-events: auto;
 	transform: translateY(0) scale(1);
 	transition-delay: 0s;
+}
+
+.menu-columns
+{
+	display: flex;
+	flex-direction: row;
+	gap: 12px;
+}
+
+.menu-column
+{
+	min-width: 150px;
 }
 
 .menu-title
@@ -164,6 +177,19 @@ body
 	#sidebarMenu {
 		top: 60px;
 		left: 10px;
+	}
+
+	.menu-column {
+		min-width: 120px;
+	}
+
+	.menu-list li a {
+		padding: 8px 12px;
+		font-size: 16px;
+	}
+
+	.banner-text {
+		font-size: 15px;
 	}
 }
 
@@ -287,4 +313,59 @@ body
 {
 	visibility: visible;
 	transform: translate(-50%, 0%) scale(1);
+}
+
+.banner
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 12px;
+	margin: 0 15px 15px 15px;
+	padding: 10px 16px;
+	background-color: #a8daf9;
+	border-radius: 15px;
+	box-shadow: -5px 5px #82c6f2;
+}
+
+.banner-badge
+{
+	flex-shrink: 0;
+	padding: 4px 12px;
+	border-radius: 10px;
+	background-color: #529cf2;
+	color: white;
+	font-size: 13px;
+	font-weight: bold;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+}
+
+.banner-text
+{
+	flex: 1;
+	margin: 0;
+	color: #529cf2;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.banner-close
+{
+	flex-shrink: 0;
+	background: none;
+	border: none;
+	border-radius: 10px;
+	padding: 4px 10px;
+	color: #529cf2;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 1;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+.banner-close:hover
+{
+	background-color: #c3e4f9;
 }

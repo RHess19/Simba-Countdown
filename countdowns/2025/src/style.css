@@ -38,7 +38,8 @@ body
 	position: fixed;
 	top: 90px;
 	left: 40px;
-	width: 200px;
+	width: max-content;
+	max-width: calc(100vw - 20px);
 	z-index: 999;
 	box-sizing: border-box;
 	padding: 12px;
@@ -61,6 +62,18 @@ body
 	pointer-events: auto;
 	transform: translateY(0) scale(1);
 	transition-delay: 0s;
+}
+
+.menu-columns
+{
+	display: flex;
+	flex-direction: row;
+	gap: 12px;
+}
+
+.menu-column
+{
+	min-width: 150px;
 }
 
 .menu-title
@@ -164,6 +177,15 @@ body
 	#sidebarMenu {
 		top: 60px;
 		left: 10px;
+	}
+
+	.menu-column {
+		min-width: 120px;
+	}
+
+	.menu-list li a {
+		padding: 8px 12px;
+		font-size: 16px;
 	}
 }
 

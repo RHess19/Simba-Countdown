@@ -1,0 +1,171 @@
+body
+{
+	background-color: lightblue;
+}
+
+#hamburgerMenu
+{
+	display: block;
+	position: fixed;
+	top: 30px;
+	left: 40px;
+	z-index: 1000;
+
+	background-color: #529cf2;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	padding: 10px 15px;
+	font-weight: bold;
+	font-size: 24px;
+	cursor: pointer;
+	box-shadow: -3px 3px #82c6f2;
+	transition: transform 0.2s ease;
+}
+
+#hamburgerMenu:hover
+{
+	transform: scale(1.05);
+}
+
+#hamburgerMenu:active
+{
+	transform: scale(0.95);
+}
+
+#sidebarMenu
+{
+	position: fixed;
+	top: 90px;
+	left: 40px;
+	width: max-content;
+	max-width: calc(100vw - 20px);
+	z-index: 999;
+	box-sizing: border-box;
+	padding: 12px;
+	background-color: #a8daf9;
+	border-radius: 15px;
+	box-shadow: -5px 5px #82c6f2;
+
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transform: translateY(-10px) scale(0.97);
+	transform-origin: top left;
+	transition: opacity 0.25s ease, transform 0.25s ease, visibility 0s linear 0.25s;
+}
+
+#sidebarMenu.open
+{
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+	transform: translateY(0) scale(1);
+	transition-delay: 0s;
+}
+
+.menu-columns
+{
+	display: flex;
+	flex-direction: row;
+	gap: 12px;
+}
+
+.menu-column
+{
+	min-width: 150px;
+}
+
+.menu-title
+{
+	margin: 4px 8px 10px 8px;
+	color: #529cf2;
+	font-size: 13px;
+	font-weight: bold;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	opacity: 0.8;
+}
+
+.menu-list
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.menu-list li a
+{
+	display: block;
+	padding: 10px 16px;
+	border-radius: 10px;
+	text-decoration: none;
+	color: #529cf2;
+	font-size: 18px;
+	font-weight: bold;
+	transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.menu-list li a:hover
+{
+	background-color: #c3e4f9;
+	transform: translateX(4px);
+}
+
+.menu-list li a.current
+{
+	background-color: #529cf2;
+	color: white;
+}
+
+.page-container.menu-open
+{
+	transition: filter 0.3s ease-in-out;
+}
+
+@media (max-width: 600px) {
+	#scrollToCurrentDay {
+		top: 10px;
+		right: 10px;
+		padding: 8px 12px;
+		font-size: 14px;
+	}
+
+	.snowflake
+	{
+		display: none;
+	}
+
+	#hamburgerMenu {
+		top: 10px;
+		left: 10px; 
+		padding: 8px 12px;
+		font-size: 20px;
+	}
+
+	#sidebarMenu {
+		top: 60px;
+		left: 10px;
+	}
+
+	.menu-column {
+		min-width: 120px;
+	}
+
+	.menu-list li a {
+		padding: 8px 12px;
+		font-size: 16px;
+	}
+
+	.banner-text {
+		font-size: 15px;
+	}
+}
+
+#menorah-picture
+{
+    
+}

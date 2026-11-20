@@ -30,8 +30,53 @@
         </div>
     </nav>
 
+
     <div class="page-container">
-        <img id="menorah-picture" src="./media/menorah.png">
+        <header class="page-header">
+            <h1>Echo's 8 Days of Hannukah</h1>
+            <p>From December 5-12, help Echo light the Menorah to receive an exclusive photo of Echo! (Hint: light the middle candle first, then light the remaining candles left to right)</p>
+            <button id="galleryButton" class="gallery-button">Past Echos</button>
+        </header>
+    
+        <div class="menorah-area">
+            <div class="menorah-stage">
+                <img class="menorah" src="./media/menorah.png" alt="Menorah">
+                <img class="candle unlit-candle" data-day="1" src="./media/candles/unlit/1.png" style="--x: 50%; --y: 40%; --w: 3%;">
+                <img class="candle unlit-candle" data-day="2" src="./media/candles/unlit/2.png" style="--x: 50%; --y: 40%; --w: 3%;">
+                <img class="candle unlit-candle" data-day="3" src="./media/candles/unlit/3.png" style="--x: 50%; --y: 40%; --w: 3%;">
+                <img class="candle unlit-candle" data-day="4" src="./media/candles/unlit/4.png" style="--x: 50%; --y: 40%; --w: 3%;">
+                <img class="candle unlit-candle" data-day="5" src="./media/candles/unlit/5.png" style="--x: 50%; --y: 40%; --w: 3%;">
+                <img class="candle unlit-candle" data-day="6" src="./media/candles/unlit/6.png" style="--x: 50%; --y: 40%; --w: 3%;">
+                <img class="candle unlit-candle" data-day="7" src="./media/candles/unlit/7.png" style="--x: 50%; --y: 40%; --w: 3%;">
+                <img class="candle unlit-candle" data-day="8" src="./media/candles/unlit/8.png" style="--x: 50%; --y: 40%; --w: 3%;">
+                <img class="candle unlit-candle" data-day="9" src="./media/candles/unlit/9.png" style="--x: 50%; --y: 40%; --w: 3%;">
+                 
+                <img class="candle lit-candle" data-day="1" src="./media/candles/lit/1.GIF" style="--x: 50%; --y: 40%; --w: 3%;">
+                <img class="candle lit-candle" data-day="2" src="./media/candles/lit/2.GIF" style="--x: 50%; --y: 40%; --w: 3%;">
+                <img class="candle lit-candle" data-day="3" src="./media/candles/lit/3.GIF" style="--x: 50%; --y: 40%; --w: 3%;">
+                <img class="candle lit-candle" data-day="4" src="./media/candles/lit/4.GIF" style="--x: 50%; --y: 40%; --w: 3%;">
+                <img class="candle lit-candle" data-day="5" src="./media/candles/lit/5.GIF" style="--x: 50%; --y: 40%; --w: 3%;">
+                <img class="candle lit-candle" data-day="6" src="./media/candles/lit/6.GIF" style="--x: 50%; --y: 40%; --w: 3%;">
+                <img class="candle lit-candle" data-day="7" src="./media/candles/lit/7.GIF" style="--x: 50%; --y: 40%; --w: 3%;">
+                <img class="candle lit-candle" data-day="8" src="./media/candles/lit/8.GIF" style="--x: 50%; --y: 40%; --w: 3%;">
+                <img class="candle lit-candle" data-day="9" src="./media/candles/lit/9.GIF" style="--x: 50%; --y: 40%; --w: 3%;">
+            </div>
+        </div>
+    </div>
+
+    <div id="galleryPopup" class="popup">
+        <div class="popup-content gallery-content">
+            <button class="popup-close" data-close aria-label="Close">&times;</button>
+            <h2>Past Echos</h2>
+            <div id="galleryGrid" class="gallery-grid"></div>
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <button class="popup-close" data-close aria-label="Close">&times;</button>
+            <img id="popupImage" src="" alt="">
+        </div>
     </div>
 </body>
 </html>
